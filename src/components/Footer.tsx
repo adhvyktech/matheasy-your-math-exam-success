@@ -20,7 +20,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Brand */}
         <div>
-          <img src={logo} alt="Matheasy" className="h-14 mb-4" />
+          <img src={logo} alt="Matheasy" className="h-20 mb-4" />
           <p className="text-sm leading-relaxed opacity-80">
             Matheasy provides focused coaching in Mathematics for TRB, SET, NET and TNPSC statistical examinations.
           </p>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";
 
@@ -60,6 +60,12 @@ const Contact = () => {
                 </div>
                 support@matheasy.in
               </a>
+              <div className="flex items-start gap-3 text-foreground font-medium">
+                <div className="w-10 h-10 rounded-full bg-primary-lighter flex items-center justify-center shrink-0">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <span>Mattuthavani, Madurai</span>
+              </div>
             </div>
           </div>
 
