@@ -29,6 +29,10 @@ export default {
           light: "hsl(var(--primary-light))",
           lighter: "hsl(var(--primary-lighter))",
         },
+        "hero-dark": "hsl(var(--hero-dark))",
+        "hero-mid": "hsl(var(--hero-mid))",
+        "gold-soft": "hsl(var(--gold-soft))",
+        "section-alt": "hsl(var(--section-alt))",
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

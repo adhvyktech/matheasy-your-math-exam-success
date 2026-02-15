@@ -15,20 +15,20 @@ const InstagramIcon = () => (
 );
 
 const Footer = () => (
-  <footer className="bg-primary text-primary-foreground">
-    <div className="container-narrow mx-auto px-4 py-12 lg:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+  <footer style={{ background: `linear-gradient(135deg, hsl(var(--hero-dark)), hsl(var(--primary)))` }} className="text-primary-foreground">
+    <div className="container-narrow mx-auto px-4 py-14 lg:px-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Brand */}
         <div>
-          <img src={logo} alt="Matheasy" className="h-20 mb-4" />
-          <p className="text-sm leading-relaxed opacity-80">
+          <img src={logo} alt="Matheasy" className="h-20 mb-5" />
+          <p className="text-sm leading-relaxed opacity-75 mb-5">
             Matheasy provides focused coaching in Mathematics for TRB, SET, NET and TNPSC statistical examinations.
           </p>
-          <div className="flex items-center gap-3 mt-4">
-            <a href="https://www.youtube.com/@matheasy-rajasekar" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="YouTube">
+          <div className="flex items-center gap-4">
+            <a href="https://www.youtube.com/@matheasy-rajasekar" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition" aria-label="YouTube">
               <YouTubeIcon />
             </a>
-            <a href="https://www.instagram.com/math_easy_academy" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity" aria-label="Instagram">
+            <a href="https://www.instagram.com/math_easy_academy" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition" aria-label="Instagram">
               <InstagramIcon />
             </a>
           </div>
@@ -36,8 +36,9 @@ const Footer = () => (
 
         {/* Quick Links */}
         <div>
-          <h4 className="text-lg font-bold mb-4 font-display">Quick Links</h4>
-          <ul className="space-y-2 text-sm">
+          <h4 className="text-lg font-bold mb-5 font-display">Quick Links</h4>
+          <div className="w-8 h-0.5 bg-accent mb-5 rounded-full" />
+          <ul className="space-y-3 text-sm">
             {[
               { name: "Home", path: "/" },
               { name: "About", path: "/about" },
@@ -45,7 +46,7 @@ const Footer = () => (
               { name: "Contact", path: "/contact" },
             ].map((l) => (
               <li key={l.path}>
-                <Link to={l.path} className="opacity-80 hover:opacity-100 transition-opacity">{l.name}</Link>
+                <Link to={l.path} className="opacity-75 hover:opacity-100 transition-opacity">{l.name}</Link>
               </li>
             ))}
           </ul>
@@ -53,15 +54,16 @@ const Footer = () => (
 
         {/* Contact */}
         <div>
-          <h4 className="text-lg font-bold mb-4 font-display">Contact</h4>
-          <div className="space-y-3 text-sm">
-            <a href="tel:9345139579" className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+          <h4 className="text-lg font-bold mb-5 font-display">Contact</h4>
+          <div className="w-8 h-0.5 bg-accent mb-5 rounded-full" />
+          <div className="space-y-4 text-sm">
+            <a href="tel:9345139579" className="flex items-center gap-3 opacity-75 hover:opacity-100 transition-opacity">
               <Phone className="w-4 h-4 shrink-0" /> 9345139579
             </a>
-            <a href="mailto:support@matheasy.in" className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+            <a href="mailto:support@matheasy.in" className="flex items-center gap-3 opacity-75 hover:opacity-100 transition-opacity">
               <Mail className="w-4 h-4 shrink-0" /> support@matheasy.in
             </a>
-            <div className="flex items-start gap-2 opacity-80">
+            <div className="flex items-start gap-3 opacity-75">
               <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
               <span>Mattuthavani, Madurai</span>
             </div>
@@ -69,7 +71,7 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="border-t border-primary-foreground/20 mt-10 pt-6 text-center text-sm opacity-60">
+      <div className="border-t border-primary-foreground/15 mt-12 pt-6 text-center text-sm opacity-50">
         © {new Date().getFullYear()} Matheasy. All rights reserved.
       </div>
     </div>
