@@ -51,6 +51,10 @@
     --primary-lighter: 230 55% 95%;
     --accent-warm: 25 85% 55%;
     --surface-elevated: 0 0% 100%;
+    --section-alt: 220 25% 93%;
+    --hero-dark: 228 60% 12%;
+    --hero-mid: 230 55% 20%;
+    --gold-soft: 38 70% 60%;
   }
 
   .dark {
@@ -106,6 +110,24 @@
   .container-narrow {
     @apply max-w-6xl mx-auto;
   }
+
+  .section-alt-bg {
+    background-color: hsl(var(--section-alt));
+  }
+}
+
+/* Math grid pattern for hero */
+.math-grid-pattern {
+  background-image:
+    linear-gradient(hsl(var(--primary-light) / 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--primary-light) / 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Subtle math dots */
+.math-dots-pattern {
+  background-image: radial-gradient(hsl(var(--primary) / 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 html {
