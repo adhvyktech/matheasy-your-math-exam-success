@@ -59,39 +59,35 @@ const successPoints = [
 const Index = () => (
   <>
     {/* ═══ HERO ═══ */}
-    <section className="relative overflow-hidden" style={{ background: `linear-gradient(135deg, hsl(var(--hero-dark)), hsl(var(--hero-mid)), hsl(var(--primary)))` }}>
+    <section className="relative overflow-hidden text-primary-foreground">
+      {/* Background banner image */}
+      <div className="absolute inset-0">
+        <img src={mathIllustration} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, hsl(var(--hero-dark) / 0.92), hsl(var(--hero-mid) / 0.88), hsl(var(--primary) / 0.85))` }} />
+      </div>
       <MathPattern className="text-primary-foreground" />
-      <div className="relative container-narrow mx-auto px-4 py-20 md:py-28 lg:py-36">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left */}
-          <div className="text-primary-foreground">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display leading-tight mb-6 animate-fade-in-up">
-              Master Competitive Mathematics for Teaching & Eligibility Exams
-            </h1>
-            <p className="text-base md:text-lg opacity-85 mb-6 leading-relaxed max-w-lg" style={{ animationDelay: "0.15s" }}>
-              Specialized coaching that transforms mathematical understanding into exam success.
-            </p>
-            {/* Exam badges */}
-            <div className="flex flex-wrap gap-2 mb-8" style={{ animationDelay: "0.25s" }}>
-              {examBadges.map((b) => (
-                <span key={b} className="inline-flex items-center gap-1.5 bg-primary-foreground/15 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-full">
-                  ✔ {b}
-                </span>
-              ))}
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3" style={{ animationDelay: "0.35s" }}>
-              <Link to="/courses" className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-7 py-3 rounded-lg font-semibold hover:brightness-110 transition">
-                Explore Courses <ArrowRight className="w-4 h-4" />
-              </Link>
-              <a href="tel:9345139579" className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/30 text-primary-foreground px-7 py-3 rounded-lg font-semibold hover:bg-primary-foreground/10 transition">
-                Call: 9345139579
-              </a>
-            </div>
-          </div>
-          {/* Right — illustration */}
-          <div className="hidden lg:flex justify-center">
-            <img src={mathIllustration} alt="Mathematics concepts illustration" className="w-full max-w-md rounded-2xl shadow-2xl border border-primary-foreground/10" />
-          </div>
+      <div className="relative container-narrow mx-auto px-4 py-24 md:py-32 lg:py-40 text-center">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-display leading-tight mb-6 animate-fade-in-up">
+          Master Competitive Mathematics<br className="hidden md:block" /> for Teaching & Eligibility Exams
+        </h1>
+        <p className="text-base md:text-lg opacity-85 mb-8 leading-relaxed max-w-2xl mx-auto" style={{ animationDelay: "0.15s" }}>
+          Specialized coaching that transforms mathematical understanding into exam success.
+        </p>
+        {/* Exam badges */}
+        <div className="flex flex-wrap gap-2 justify-center mb-8" style={{ animationDelay: "0.25s" }}>
+          {examBadges.map((b) => (
+            <span key={b} className="inline-flex items-center gap-1.5 bg-primary-foreground/15 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-full">
+              ✔ {b}
+            </span>
+          ))}
+        </div>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center" style={{ animationDelay: "0.35s" }}>
+          <Link to="/courses" className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-8 py-3 rounded-lg font-semibold hover:brightness-110 transition">
+            Explore Courses <ArrowRight className="w-4 h-4" />
+          </Link>
+          <a href="tel:9345139579" className="inline-flex items-center justify-center gap-2 border-2 border-primary-foreground/30 text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary-foreground/10 transition">
+            Call: 9345139579
+          </a>
         </div>
 
         {/* Stat highlights */}
