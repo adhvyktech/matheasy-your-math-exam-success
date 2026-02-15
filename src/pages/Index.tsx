@@ -1,4 +1,4 @@
-import { BookOpen, Users, Target, HeadphonesIcon, Search, UserPlus, GraduationCap, Play, ExternalLink } from "lucide-react";
+import { BookOpen, Users, Target, HeadphonesIcon, Search, UserPlus, GraduationCap } from "lucide-react";
 import CourseCard from "@/components/CourseCard";
 import ContactStrip from "@/components/ContactStrip";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -22,13 +22,6 @@ const steps = [
   { icon: Search, step: "01", title: "Enquiry & Counselling", desc: "Reach out to us and discuss your exam preparation goals." },
   { icon: UserPlus, step: "02", title: "Join Batch", desc: "Enrol in the appropriate course batch based on your target exam." },
   { icon: GraduationCap, step: "03", title: "Attend & Practice", desc: "Attend classes, practice problems and prepare with expert guidance." },
-];
-
-const latestVideos = [
-  { id: "TTORanzCTyY", title: "PG TRB Mathematics - Achievers Talk" },
-  { id: "dQw4w9WgXcQ", title: "Real Analysis - Key Concepts" },
-  { id: "dQw4w9WgXcQ", title: "Linear Algebra Tips for NET" },
-  { id: "dQw4w9WgXcQ", title: "TNPSC Statistics Preparation" },
 ];
 
 const Index = () => (
@@ -108,57 +101,11 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Latest from YouTube */}
+    {/* Results & Achievements */}
     <section className="section-padding bg-muted">
       <div className="container-narrow mx-auto">
-        <h2 className="text-2xl md:text-4xl font-bold font-display text-center text-foreground mb-4">Latest from Our Channel</h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">Watch our latest lectures, tips and exam preparation videos on YouTube.</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {latestVideos.map((v, i) => (
-            <a
-              key={i}
-              href={`https://www.youtube.com/watch?v=${v.id}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-card rounded-xl border border-border overflow-hidden hover:shadow-md transition-shadow"
-            >
-              <div className="relative aspect-video bg-muted">
-                <img
-                  src={`https://img.youtube.com/vi/${v.id}/mqdefault.jpg`}
-                  alt={v.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-foreground/20 group-hover:bg-foreground/30 transition-colors">
-                  <div className="w-12 h-12 rounded-full bg-destructive flex items-center justify-center">
-                    <Play className="w-5 h-5 text-primary-foreground fill-primary-foreground ml-0.5" />
-                  </div>
-                </div>
-              </div>
-              <div className="p-3">
-                <p className="text-sm font-medium text-foreground line-clamp-2">{v.title}</p>
-              </div>
-            </a>
-          ))}
-        </div>
-        <div className="text-center mt-8">
-          <a
-            href="https://www.youtube.com/@matheasy-rajasekar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-destructive text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:brightness-110 transition text-sm"
-          >
-            <ExternalLink className="w-4 h-4" />
-            View All Videos on YouTube
-          </a>
-        </div>
-      </div>
-    </section>
-
-    {/* Success Story */}
-    <section className="section-padding bg-background">
-      <div className="container-narrow mx-auto">
-        <h2 className="text-2xl md:text-4xl font-bold font-display text-center text-foreground mb-4">PG TRB Achievers Talk</h2>
-        <p className="text-center text-muted-foreground mb-10 max-w-xl mx-auto">Hear from our successful students who cleared PG TRB Mathematics.</p>
+        <h2 className="text-2xl md:text-4xl font-bold font-display text-center text-foreground mb-4">Results & Achievements</h2>
+        <p className="text-center text-muted-foreground mb-10 max-w-xl mx-auto">Our students share their success journey — from preparation at Matheasy to clearing PG TRB Mathematics.</p>
         <div className="max-w-3xl mx-auto">
           <div className="relative rounded-xl overflow-hidden border border-border shadow-lg aspect-video">
             <iframe
