@@ -164,7 +164,7 @@ const Index = () => (
           {/* Connecting line (desktop) */}
           <div className="hidden md:block absolute top-8 left-[16.67%] right-[16.67%] h-0.5 bg-border" />
           {steps.map((s, i) => (
-            <div key={s.step} className="flex-1 flex flex-col items-center text-center relative z-10">
+            <div key={s.step} className="flex-1 flex flex-col items-center text-center relative z-10 w-full">
               <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-4 shadow-lg ring-4 ring-background">
                 <span className="text-primary-foreground font-bold text-lg">{s.step}</span>
               </div>
