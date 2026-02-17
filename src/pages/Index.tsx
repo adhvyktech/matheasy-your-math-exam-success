@@ -6,6 +6,7 @@ import {
 import CourseCard from "@/components/CourseCard";
 import ContactStrip from "@/components/ContactStrip";
 import MathPattern from "@/components/MathPattern";
+import SuccessStories from "@/components/SuccessStories";
 import mathIllustration from "@/assets/math-illustration.png";
 
 /* ─── Data ─── */
@@ -129,6 +130,9 @@ const Index = () => (
         </div>
       </div>
     </section>
+
+    {/* ═══ SUCCESS STORIES ═══ */}
+    <SuccessStories />
 
     {/* ═══ WHY MATHEASY ═══ */}
     <section className="section-padding section-alt-bg">
