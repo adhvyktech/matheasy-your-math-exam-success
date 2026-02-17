@@ -91,12 +91,8 @@ const SuccessStories = () => {
                     alt={a.name}
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
-                  {/* Mark badge */}
-                  <div className="absolute top-3 right-3 bg-primary text-primary-foreground text-sm font-bold px-3 py-1.5 rounded-full shadow-lg">
-                    {a.mark} Marks
-                  </div>
                   {a.badge && (
-                    <div className="absolute top-3 left-3 flex items-center gap-1 bg-accent text-accent-foreground text-xs font-bold px-2.5 py-1.5 rounded-full shadow-lg">
+                    <div className="absolute bottom-3 left-3 flex items-center gap-1 bg-accent text-accent-foreground text-xs font-bold px-2.5 py-1.5 rounded-full shadow-lg">
                       <Award className="w-3.5 h-3.5" />
                       {a.badge}
                     </div>
@@ -105,7 +101,10 @@ const SuccessStories = () => {
                 {/* Info */}
                 <div className="p-4 text-center">
                   <h3 className="font-bold text-foreground text-lg font-display">{a.name}</h3>
-                  <p className="text-sm text-muted-foreground mt-1">PG TRB Mathematics</p>
+                  <div className="flex items-center justify-center gap-2 mt-1.5">
+                    <span className="text-sm text-muted-foreground">PG TRB Mathematics</span>
+                    <span className="bg-primary text-primary-foreground text-xs font-bold px-2.5 py-1 rounded-full">{a.mark} Marks</span>
+                  </div>
                 </div>
               </div>
             ))}
