@@ -7,6 +7,7 @@ import CourseCard from "@/components/CourseCard";
 import ContactStrip from "@/components/ContactStrip";
 import MathPattern from "@/components/MathPattern";
 import SuccessStories from "@/components/SuccessStories";
+import GoogleReviews from "@/components/GoogleReviews";
 import mathIllustration from "@/assets/math-illustration.png";
 
 /* ─── Data ─── */
@@ -229,6 +230,9 @@ const Index = () => (
         </div>
       </div>
     </section>
+
+    {/* ═══ GOOGLE REVIEWS ═══ */}
+    <GoogleReviews />
 
     <ContactStrip />
   </>
